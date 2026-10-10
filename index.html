@@ -23,12 +23,15 @@
     #bar a, #setlabel, #themes button { color: var(--ink); opacity: 0.65; background: transparent; border: 0; font: 13px -apple-system, system-ui, sans-serif; text-decoration: none; cursor: pointer; }
     #themes { display: flex; gap: 0.4rem; }
     #themes i { display: block; width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 40%, transparent); }
+    .support { margin-top: 3rem; font-size: 0.85rem; color: var(--ink); opacity: 0.5; text-align: center; }
+    .support a { text-decoration: underline; opacity: 0.8; }
   </style>
 </head>
 <body>
   <div id="app"></div>
   <script>
     const FEEDING = "https://give.feedingamerica.org/8u355rD-u02ytwE0jUq9jQ2?source=Y26YP6D1Z&utm_medium=cpc&utm_source=paid&utm_term=gift&utm_content=bing&utm_campaign=thanksgiving&gclid=49b8ac7ea3a91f16ecc9c6b927de9e79&gclsrc=3p.ds&msclkid=49b8ac7ea3a91f16ecc9c6b927de9e79";
+    const COFFEE = "https://buymeacoffee.com/estheraloe";
     const params = new URLSearchParams(location.search);
     const page = params.get("page") || "home";
     const app = document.getElementById("app");
@@ -131,7 +134,7 @@
           <a href="?page=elijah">Elijah & the Broom Tree<span>1 Kings 19:4, 5–7, and 8.</span></a>
           <a href="?page=quotes">Quotes<span>A few verses.</span></a>
         </nav>
-        <a class="button" href="${FEEDING}" target="_blank">Donate to Feeding America</a>
+        <p class="support">Support: <a href="${FEEDING}" target="_blank">Feeding America</a> · <a href="${COFFEE}" target="_blank">Buy me a coffee</a></p>
       </main>`;
     }
 
